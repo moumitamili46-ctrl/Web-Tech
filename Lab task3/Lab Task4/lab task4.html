@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function handle_submission() {
+            const username_value = document.getElementById("username").value;
+            const password_value = document.getElementById("password").value;
+
+            if (!username_value) {
+                document.getElementById("username_error").innerHTML = "Username is required!!";
+            } else {
+                document.getElementById("username_error").innerHTML = "";
+            }
+
+            if (!password_value) {
+                document.getElementById("pass_error").innerHTML = "Password is required!!";
+            } else {
+                document.getElementById("pass_error").innerHTML = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="#" class="logo"><span>X</span>Company</a>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="LabTask-022.html">Login</a></li>
+                        <li><a href="#">Registration</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <span class="just-login">LOGIN</span>
+            <div class="login-box">
+
+                <div class="user-info">
+                    <table>
+                        <tr>
+                            <td><label for="username">Username:</label></td>
+                            <td><input id="username" type="text" placeholder="Enter Username"></td>
+                            <td><p id="username_error" style="color: red;"></p></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input id="password" type="password" placeholder="Enter Password"></td>
+                            <td><p id="pass_error" style="color: red;"></p></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="user-footer">
+                    <table>
+                        <tr>
+                            <td><input type="checkbox"> <label>Remember</label></td>
+                        </tr>
+                    </table>
+
+                    <div class="user-btn">
+                        <a onclick="handle_submission()" href="#" class="submit-btn">Submit</a>
+                        <a href="#" class="forgot-btn">Forgot Password</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-part">
+                <p>Copywrite © 2017</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
